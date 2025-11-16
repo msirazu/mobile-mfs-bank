@@ -21,14 +21,15 @@
          <form action=""><fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
 
   <label class="label font-bold text-sm">Mobile Number</label>
-  <input type="number" class="input" placeholder="Enter your number" />
+  <input id="mobile-number" type="number" required class="input" value="01303123456" placeholder="Enter your number" />
 
   <label class="label font-bold">4 Digit Pin</label>
-  <input type="text" class="input" placeholder="Enter 4 Digit Pin" />
+  <input id="pin-number" type="text" required value="1234" class="input" placeholder="Enter 4 Digit Pin" />
 
-  <button class="btn btn-info mt-4 text-white font-bold rounded-full">Login</button>
+  <button id="login-btn" class="btn btn-info mt-4 text-white font-bold rounded-full">Login</button>
             </fieldset></form>
         </div>
     </section>
+    <script src="./script/login.js"></script>
 </body>
 </html>
