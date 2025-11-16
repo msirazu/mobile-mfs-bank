@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mobile Bank</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    
+    <section class="bg-[#F4F5F7] max-w-sm min-h-screen mx-auto">
+        <header class="flex flex-col items-center pt-25">
+            <div class="w-50 relative">
+                <img class="w-full" src="./assets/bg.png" alt="">                
+            </div>
+            <div class="absolute mt-5">
+                <img src="./assets/Group.png" alt="">
+            </div>
+        </header>
+        <div class="flex justify-center">
+         <form action=""><fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+
+  <label class="label font-bold text-sm">Mobile Number</label>
+  <input type="number" class="input" placeholder="Enter your number" />
+
+  <label class="label font-bold">4 Digit Pin</label>
+  <input type="text" class="input" placeholder="Enter 4 Digit Pin" />
+
+  <button class="btn btn-info mt-4 text-white font-bold rounded-full">Login</button>
+            </fieldset></form>
+        </div>
+    </section>
 </body>
 </html>
