@@ -25,11 +25,11 @@
 <!-- availabe balance section -->
 <div>
     <h2 class="font-bold text-xl">$ <span id="main-balance">45000</span></h2>
-    <p class="capitalize">availabe balance</p>
+    <p class="capitalize text-gray-500">availabe balance</p>
 </div>
 <!-- log out button section -->
 <div>
-    <button id="log-out" class="btn capitalize">log out</button>
+    <button id="log-out" class="btn capitalize"><i class="fa-solid fa-arrow-right-from-bracket"></i>log out</button>
 </div>
     </nav>
 </header>
@@ -42,36 +42,65 @@
 </section>
 <!-- grid features section -->
 <section class="capitalize grid grid-cols-3 p-5 gap-3">
-<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
     <!-- add money -->
     <div><img src="./assets/wallet1.png" alt="wallet-icon"></div>
     <h4 class="mt-1 text-sm px-2">add money</h4>
 </div>
 <!-- cashout -->
-<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
     <div><img src="./assets/send1.png" alt="send-icon"></div>
     <h4 class="mt-1 text-sm px-2">cashout</h4>
 </div>
 <!-- transfer money -->
-<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
     <div><img src="./assets/money1.png" alt="money-icon"></div>
     <h4 class="mt-1 text-sm">transfer money</h4>
 </div>
 <!-- get bonus -->
-<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
     <div><img src="./assets/bonus1.png" alt="bonus-icon"></div>
     <h4 class="mt-1 text-sm">get bonus</h4>
 </div>
 <!-- pay bill -->
-<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
     <div><img src="./assets/purse1.png" alt="purse-icon"></div>
     <h4 class="mt-1 text-sm">pay bill</h4>
 </div>
 <!-- transaction -->
-<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
     <div><img src="./assets/transaction1.png" alt="transaction-icon"></div>
     <h4 class="mt-1 text-sm">transaction</h4>
 </div>
+</section>
+<!-- add money section -->
+<section id="add-money-section">
+    <div class="text-center mb-5 font-bold capitalize text-lg"><h4>add money</h4></div>
+    <div class="flex justify-center">
+        <form action="">
+        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+
+    <label class="label capitalize">select a bank</label>
+    <select class="btn bg-white text-left text-gray-600" name="" id="bank-account" required>
+        <option value="">select a bank</option>
+        <option value="bkash">bKash</option>
+        <option value="nagad">Nagad</option>
+        <option value="upay">uPay</option>
+        <option value="rocket">Rocket</option>
+    </select>
+
+    <label class="label capitalize">bank account number</label>
+    <input type="number" class="input" placeholder="Enter 11 digit account number" required/>
+
+    <label class="label capitalize">amount to add</label>
+    <input type="number" class="input" placeholder="Add amount to withdraw" required/>
+
+    <label class="label capitalize">pin number</label>
+    <input type="text" class="input" placeholder="Enter 4 digit pin number" required/>
+
+  <button class="btn btn-info mt-4 text-md text-white font-bold rounded-full capitalize">add money</button>
+</fieldset></form>
+    </div>
 </section>
 <script src="./script/log_out.js"></script>
 </body>
