@@ -16,6 +16,9 @@ if (accountNumber.length === 11) {
         if (convertedPinNumber === 1234) {
         const sum = convertedMainBalance + convertedAddAmount;
         document.getElementById('main-balance').innerText = sum;
+        document.getElementById('add-money-amount').value = '';
+        document.getElementById('add-money-pin').value = '';
+        document.getElementById('add-money-account').value = '';
     } else {
         alert('pin number invalid');
     }
