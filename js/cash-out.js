@@ -14,13 +14,17 @@ if (accountNumber.length === 11) {
         alert('valid amount must be given. 0 & - amount not allowed');
     } else {
         if (convertedPinNumber === 1234) {
-        const sum = convertedMainBalance - convertedAddAmount;
-        document.getElementById('main-balance').innerText = sum;
-        document.getElementById('cash-out-amount').value = '';
-        document.getElementById('cash-out-pin').value = '';
-        document.getElementById('cash-out-account').value = '';
+            if (convertedAddAmount < convertedMainBalance ) {
+                const sum = convertedMainBalance - convertedAddAmount;
+                document.getElementById('main-balance').innerText = sum;
+                document.getElementById('cash-out-amount').value = '';
+                document.getElementById('cash-out-pin').value = '';
+                document.getElementById('cash-out-account').value = '';
+            } else {
+                alert('can not exceed max amount');
+            }
     } else {
-        alert('pin requred 1234');
+        alert('pin number requred 1234');
     }
     }
 } else {
