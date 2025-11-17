@@ -11,7 +11,7 @@ const convertedPinNumber = parseInt(pinNumber);
 
 if (accountNumber.length === 11) {
     if (addAmount <= 0 || addAmount === '') {
-        alert('amount must be given');
+        alert('valid amount must be given');
     } else {
         if (convertedPinNumber === 1234) {
         const sum = convertedMainBalance + convertedAddAmount;
