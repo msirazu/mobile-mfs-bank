@@ -9,31 +9,69 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/0b3008bcdf.js" crossorigin="anonymous"></script>
 <style>
 .font-outfit {
   font-family: "Outfit", sans-serif;
 }</style>
 </head>
 <body class="max-w-sm min-h-screen mx-auto bg-gray-50 font-outfit">
+    <!-- header image section -->
 <header class="border-b-2 border-gray-200">
     <nav class="flex justify-around py-5 items-center">
 <div class="w-15">
     <img src="./assets/Group.png" alt="">
 </div>
+<!-- availabe balance section -->
 <div>
     <h2 class="font-bold text-xl">$ <span id="main-balance">45000</span></h2>
     <p class="capitalize">availabe balance</p>
 </div>
+<!-- log out button section -->
 <div>
     <button id="log-out" class="btn capitalize">log out</button>
 </div>
     </nav>
 </header>
+<!-- h1 & p section -->
 <section>
     <div class="px-7 py-5">
-        <h3 class="font-bold text-xl">Welcome to Mobile Bank!</h3>
-        <p class="pt-2">Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
+        <h3 class="font-bold text-xl"><i class="text-red-500 fa-solid fa-fire pr-2"></i>Welcome to Mobile Bank!</h3>
+        <p class="pt-2 text-gray-500">Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
     </div>
+</section>
+<!-- grid features section -->
+<section class="capitalize grid grid-cols-3 p-5 gap-3">
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+    <!-- add money -->
+    <div><img src="./assets/wallet1.png" alt="wallet-icon"></div>
+    <h4 class="mt-1 text-sm px-2">add money</h4>
+</div>
+<!-- cashout -->
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+    <div><img src="./assets/send1.png" alt="send-icon"></div>
+    <h4 class="mt-1 text-sm px-2">cashout</h4>
+</div>
+<!-- transfer money -->
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+    <div><img src="./assets/money1.png" alt="money-icon"></div>
+    <h4 class="mt-1 text-sm">transfer money</h4>
+</div>
+<!-- get bonus -->
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+    <div><img src="./assets/bonus1.png" alt="bonus-icon"></div>
+    <h4 class="mt-1 text-sm">get bonus</h4>
+</div>
+<!-- pay bill -->
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+    <div><img src="./assets/purse1.png" alt="purse-icon"></div>
+    <h4 class="mt-1 text-sm">pay bill</h4>
+</div>
+<!-- transaction -->
+<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-gray-300 cursor-pointer">
+    <div><img src="./assets/transaction1.png" alt="transaction-icon"></div>
+    <h4 class="mt-1 text-sm">transaction</h4>
+</div>
 </section>
 </body>
 </html>
