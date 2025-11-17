@@ -39,13 +39,13 @@
 </section>
 <!-- grid features section -->
 <section class="capitalize grid grid-cols-3 p-5 gap-3">
-<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
+<div id="add-money-box" class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
     <!-- add money -->
     <div><img src="./assets/wallet1.png" alt="wallet-icon"></div>
     <div><h4 class="mt-1 text-sm px-2">add money</h4></div>
 </div>
 <!-- cashout -->
-<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
+<div id="cash-out-box" class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
     <div><img src="./assets/send1.png" alt="send-icon"></div>
     <div><h4 class="mt-1 text-sm px-2">cashout</h4></div>
 </div>
@@ -65,10 +65,16 @@
     <div><h4 class="mt-1 text-sm">pay bill</h4></div>
 </div>
 <!-- transaction -->
-<div class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
+<div id="transaction-box" class="border border-gray-200 rounded-xl flex flex-col justify-center items-center py-3 hover:bg-white cursor-pointer">
     <div><img src="./assets/transaction1.png" alt="transaction-icon"></div>
     <div><h4 class="mt-1 text-sm">transaction</h4></div>
 </div>
+</section>
+<!-- latest payment -->
+<section class="bg-white p-5 my-5" id="latest-payment-section">
+<div class="flex justify-around items-center">
+<div><h4 class="capitalize font-bold text-center">latest payment</h4></div>
+<div><button class="btn capitalize">view all</button></div></div>
 </section>
 <!-- add money section -->
 <section id="add-money-section">
@@ -90,7 +96,7 @@
     <input type="number" value="" id="add-money-account" class="input" placeholder="Enter 11 digit mobile number" required/>
 
     <label class="label capitalize">amount to add</label>
-    <input type="number" value="" id="add-money-amount" class="input" placeholder="Add amount to withdraw" required/>
+    <input type="number" value="" id="add-money-amount" class="input" placeholder="Enter amount to add" required/>
 
     <label class="label capitalize">pin number</label>
     <input id="add-money-pin" value="" type="text" class="input" placeholder="Enter 4 digit pin number" required/>
@@ -99,7 +105,30 @@
 </fieldset></form>
     </div>
 </section>
+<!-- cash out section -->
+<section id="cash-out-section">
+    <div class="text-center my-5 font-bold capitalize text-lg"><h4>cash out</h4></div>
+    <div class="flex justify-center">
+        <form action="">
+        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+
+    <label class="label capitalize">agent number</label>
+    <input type="number" value="" id="cash-out-account" class="input" placeholder="Enter 11 digit mobile number" required/>
+
+    <label class="label capitalize">amount</label>
+    <input type="number" value="" id="cash-out-amount" class="input" placeholder="Enter amount to withdraw" required/>
+
+    <label class="label capitalize">pin number</label>
+    <input id="cash-out-pin" value="" type="text" class="input" placeholder="Enter 4 digit pin number" required/>
+
+  <button id="cash-out-btn" class="btn btn-info mt-4 text-md text-white font-bold rounded-full capitalize">withdraw money</button>
+</fieldset></form>
+    </div>
+</section>
+
+<script src="./js/toggle.js"></script>
 <script src="./js/add-money.js"></script>
+<script src="./js/cash-out.js"></script>
 <script src="./js/log-out.js"></script>
 </body>
 </html>
