@@ -8,9 +8,9 @@ if (accountNumber.length === 11) {
     if (convertedPinNumber === 1234) {
         window.location.href="./main.html";
     } else {
-        alert('invalid pin number');
+        alert('pin number must be 1234');
     }
 } else {
-    alert('invalid account number');
+    alert('11 digit mobile number required');
 }
 });

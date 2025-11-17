@@ -11,7 +11,7 @@ const convertedPinNumber = parseInt(pinNumber);
 
 if (accountNumber.length === 11) {
     if (addAmount <= 0 || addAmount === '') {
-        alert('valid amount must be given');
+        alert('valid amount must be given. 0 & - amount not allowed');
     } else {
         if (convertedPinNumber === 1234) {
         const sum = convertedMainBalance + convertedAddAmount;
@@ -20,7 +20,7 @@ if (accountNumber.length === 11) {
         document.getElementById('add-money-pin').value = '';
         document.getElementById('add-money-account').value = '';
     } else {
-        alert('pin number invalid');
+        alert('pin requred 1234');
     }
     }
 } else {
