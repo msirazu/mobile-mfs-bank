@@ -6,8 +6,34 @@
     <title>Main</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<style>
+.font-outfit {
+  font-family: "Outfit", sans-serif;
+}</style>
 </head>
-<body>
-    
+<body class="max-w-sm min-h-screen mx-auto bg-gray-50 font-outfit">
+<header class="border-b-2 border-gray-200">
+    <nav class="flex justify-around py-5 items-center">
+<div class="w-15">
+    <img src="./assets/Group.png" alt="">
+</div>
+<div>
+    <h2 class="font-bold text-xl">$ <span id="main-balance">45000</span></h2>
+    <p class="capitalize">availabe balance</p>
+</div>
+<div>
+    <button id="log-out" class="btn capitalize">log out</button>
+</div>
+    </nav>
+</header>
+<section>
+    <div class="px-7 py-5">
+        <h3 class="font-bold text-xl">Welcome to Mobile Bank!</h3>
+        <p class="pt-2">Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
+    </div>
+</section>
 </body>
 </html>
