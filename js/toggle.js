@@ -30,3 +30,13 @@ document.getElementById('transaction-box').addEventListener
     document.getElementById('cash-out-section')
     .style.display = 'none';
 });
+
+document.getElementById('view-all-btn').addEventListener
+('click', function(){
+    document.getElementById('add-money-section')
+    .style.display = 'none';
+    document.getElementById('latest-payment-section')
+    .style.display = 'block';
+    document.getElementById('cash-out-section')
+    .style.display = 'none';
+});

@@ -17,16 +17,14 @@ if (accountNumber.length === 11) {
         if (convertedPinNumber === 1234) {
         const sum = convertedMainBalance + convertedAddAmount;
         document.getElementById('main-balance').innerText = sum;
-        document.getElementById('add-money-amount').value = '';
-        document.getElementById('add-money-pin').value = '';
-        document.getElementById('add-money-account').value = '';
         const transactionContainer = document.getElementById('transaction-list-area');
         const tAreaDiv = document.createElement('div');
-        tAreaDiv.classList.add('bg-green-100');
+        tAreaDiv.classList.add('bg-green-100', 'p-5', 'rounded', 'mt-5');
         tAreaDiv.innerHTML = `
-        <h5 class='font-bold text-xl text-center'>Added Money</h5>
-        <p>Amount ${addAmount} & Account number ${accountNumber}</p>
-        <p>Bank account ${bankAccount}</p>
+        <h5 class='font-bold text-base text-center mb-2'>Added Money</h5>
+        <p>Amount = ${addAmount}</p>
+        <p>Account number = ${accountNumber}</p>
+        <p>Bank account = ${bankAccount}</p>
         `;
         transactionContainer.appendChild(tAreaDiv);
     } else {

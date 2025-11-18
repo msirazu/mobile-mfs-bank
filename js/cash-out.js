@@ -17,14 +17,15 @@ if (accountNumber.length === 11) {
             if (convertedAddAmount < convertedMainBalance ) {
                 const sum = convertedMainBalance - convertedAddAmount;
                 document.getElementById('main-balance').innerText = sum;
-                document.getElementById('cash-out-amount').value = '';
-                document.getElementById('cash-out-pin').value = '';
-                document.getElementById('cash-out-account').value = '';
                 const transactionContainer = document.getElementById('transaction-list-area');
-                const p = document.createElement('p');
-                p.innerText = `Cashout ${addAmount} amount from
-                ${accountNumber} account.`;
-                transactionContainer.appendChild(p);
+                const tAreaDiv = document.createElement('div');
+                tAreaDiv.classList.add('bg-green-100', 'p-5', 'rounded', 'mt-5');
+                tAreaDiv.innerHTML = `
+                <h5 class='font-bold text-base text-center mb-2'>Cashout Amount</h5>
+                <p>Cashout amount = ${convertedAddAmount}</p>
+                <p>Account number = ${accountNumber}</p>
+                `;
+                transactionContainer.appendChild(tAreaDiv);
             } else {
                 alert('can not exceed max amount');
             }
