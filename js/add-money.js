@@ -8,6 +8,7 @@ const convertedAddAmount = parseFloat(addAmount);
 const accountNumber = document.getElementById('add-money-account').value;
 const pinNumber = document.getElementById('add-money-pin').value;
 const convertedPinNumber = parseInt(pinNumber);
+const bankAccount = document.getElementById('bank-account').value;
 
 if (accountNumber.length === 11) {
     if (addAmount <= 0 || addAmount === '') {
@@ -19,6 +20,15 @@ if (accountNumber.length === 11) {
         document.getElementById('add-money-amount').value = '';
         document.getElementById('add-money-pin').value = '';
         document.getElementById('add-money-account').value = '';
+        const transactionContainer = document.getElementById('transaction-list-area');
+        const tAreaDiv = document.createElement('div');
+        tAreaDiv.classList.add('bg-green-100');
+        tAreaDiv.innerHTML = `
+        <h5 class='font-bold text-xl text-center'>Added Money</h5>
+        <p>Amount ${addAmount} & Account number ${accountNumber}</p>
+        <p>Bank account ${bankAccount}</p>
+        `;
+        transactionContainer.appendChild(tAreaDiv);
     } else {
         alert('pin requred 1234');
     }

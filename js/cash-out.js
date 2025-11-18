@@ -20,6 +20,11 @@ if (accountNumber.length === 11) {
                 document.getElementById('cash-out-amount').value = '';
                 document.getElementById('cash-out-pin').value = '';
                 document.getElementById('cash-out-account').value = '';
+                const transactionContainer = document.getElementById('transaction-list-area');
+                const p = document.createElement('p');
+                p.innerText = `Cashout ${addAmount} amount from
+                ${accountNumber} account.`;
+                transactionContainer.appendChild(p);
             } else {
                 alert('can not exceed max amount');
             }
