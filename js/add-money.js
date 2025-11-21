@@ -1,21 +1,18 @@
 document.getElementById('add-money-btn').addEventListener
 ('click', function(event){
     event.preventDefault();
-const mainBalance = document.getElementById('main-balance').innerText;
-const convertedMainBalance = parseFloat(mainBalance);
-const addAmount = document.getElementById('add-money-amount').value;
-const convertedAddAmount = parseFloat(addAmount);
-const accountNumber = document.getElementById('add-money-account').value;
-const pinNumber = document.getElementById('add-money-pin').value;
-const convertedPinNumber = parseInt(pinNumber);
-const bankAccount = document.getElementById('bank-account').value;
+    const mainBalance = innerTextNumberConverter('main-balance');
+    const addAmount = numberValueConverter('add-money-amount');
+    const accountNumber = getValue('add-money-account');
+    const pinNumber = numberValueConverter('add-money-pin');
+    const bankAccount = getValue('bank-account');
 
 if (accountNumber.length === 11) {
     if (addAmount <= 0 || addAmount === '') {
         alert('valid amount must be given. 0 & - amount not allowed');
     } else {
-        if (convertedPinNumber === 1234) {
-        const sum = convertedMainBalance + convertedAddAmount;
+        if (pinNumber === 1234) {
+        const sum = mainBalance + addAmount;
         document.getElementById('main-balance').innerText = sum;
         const transactionContainer = document.getElementById('transaction-list-area');
         const tAreaDiv = document.createElement('div');

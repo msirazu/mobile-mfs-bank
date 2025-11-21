@@ -1,28 +1,25 @@
 document.getElementById('cash-out-btn').addEventListener
 ('click', function(event){
     event.preventDefault();
-const mainBalance = document.getElementById('main-balance').innerText;
-const convertedMainBalance = parseFloat(mainBalance);
-const addAmount = document.getElementById('cash-out-amount').value;
-const convertedAddAmount = parseFloat(addAmount);
-const accountNumber = document.getElementById('cash-out-account').value;
-const pinNumber = document.getElementById('cash-out-pin').value;
-const convertedPinNumber = parseInt(pinNumber);
+    const mainBalance = innerTextNumberConverter('main-balance');
+    const addAmount = numberValueConverter('cash-out-amount');
+    const accountNumber = getValue('cash-out-account');
+    const pinNumber = numberValueConverter('cash-out-pin');
 
 if (accountNumber.length === 11) {
     if (addAmount <= 0 || addAmount === '') {
         alert('valid amount must be given. 0 & - amount not allowed');
     } else {
-        if (convertedPinNumber === 1234) {
-            if (convertedAddAmount < convertedMainBalance ) {
-                const sum = convertedMainBalance - convertedAddAmount;
-                document.getElementById('main-balance').innerText = sum;
+        if (pinNumber === 1234) {
+            if (addAmount < mainBalance ) {
+                const sub = mainBalance - addAmount;
+                document.getElementById('main-balance').innerText = sub;
                 const transactionContainer = document.getElementById('transaction-list-area');
                 const tAreaDiv = document.createElement('div');
                 tAreaDiv.classList.add('bg-green-100', 'p-5', 'rounded', 'mt-5');
                 tAreaDiv.innerHTML = `
                 <h5 class='font-bold text-base text-center mb-2'>Cashout Amount</h5>
-                <p>Cashout amount = ${convertedAddAmount}</p>
+                <p>Cashout amount = ${addAmount}</p>
                 <p>Account number = ${accountNumber}</p>
                 `;
                 transactionContainer.appendChild(tAreaDiv);
